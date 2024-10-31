@@ -1,0 +1,77 @@
+/* Center calculator on the screen */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e1e2e;
+    font-family: Arial, sans-serif;
+  }
+  
+  #calculator {
+    width: 320px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #display {
+    background-color: #444;
+    color: #00e676;
+    padding: 20px;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+    text-align: right;
+    border-radius: 8px;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  #buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  /* Number and operator buttons */
+  button:not(#clear):not(#equals) {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  button:hover:not(#clear):not(#equals) {
+    background-color: #666;
+  }
+  
+  /* Clear and Equals buttons for emphasis */
+  #clear {
+    background-color: #ff5c5c;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #clear:hover {
+    background-color: #ff7878;
+  }
+  
+  #equals {
+    background-color: #00e676;
+    color: white;
+    font-weight: bold;
+    grid-column: span 2;
+  }
+  
+  #equals:hover {
+    background-color: #00ff7f;
+  }
+  
